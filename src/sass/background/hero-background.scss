@@ -1,11 +1,7 @@
-@mixin hundredscreen {
-    height: 100vh;
-    width: 100%;
-}
-    
+@import "./global-back.scss";
 
 #hero {
-    .background {
+  .background {
     background-image: url(../assets/images/giphy.gif);
     background-attachment: fixed;
     background-position: center;
@@ -14,8 +10,8 @@
     z-index: -999;
     @include hundredscreen;
     &__opacity {
-        background-color: hsla(0, 0%, 0%, 0.6);
-        @include hundredscreen;
+      background-color: hsla(0, 0%, 0%, 0.6);
+      @include hundredscreen;
     }
-}
+  }
 }

@@ -1,0 +1,14 @@
+@import '../others/index';
+
+#footer {
+    @include flexcenter;
+    background-color: orange;
+    width: 100%;
+    height: 5vh;
+    .copyright {
+        color: white;
+        a {
+            color: blue;
+        }
+    }
+}

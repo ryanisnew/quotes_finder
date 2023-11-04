@@ -1,21 +1,19 @@
-@mixin flexcenter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+@import "../others/utilities.scss";
+@import "./hero-utilities.scss";
 
 .hero {
   height: 100vh;
-  width: 100vw;
+  width: 95vw;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 200px;
 
   //   hero left
-  __left {
-    flex: 1;
-    __title {
+  &__left {
+    width: 45%;
+    padding-left: $padding-left;
+    margin-inline: 20px;
+    &__title {
       font-size: 24px;
       font-weight: bold;
       margin-bottom: 10px;
@@ -24,14 +22,33 @@
       width: 100%;
       padding: 10px;
       font-size: 16px;
+      color: black;
     }
   }
   //   hero right
-  __right {
-    flex: 1;
+  &__right {
+    width: 30vw;
+    background-color: none;
+    flex-direction: column;
+    padding-right: $padding-right;
+    margin-right: 80px;
+    margin-top: 90px;
     @include flexcenter();
-    .paragraph {
-      font-size: 16px;
+    img {
+        border-radius: 10px;
+        object-fit: cover;
+        @include allimg;
+        @include boxshadow;
+    }
+    .overlay-text {
+      width: auto;
+      position: relative;
+      background-color: #000000;
+      color: #fff;
+      top: -70px;
+      padding: 10px 20px;
+      font-size: 20px;
+      text-align: center;
     }
   }
 }

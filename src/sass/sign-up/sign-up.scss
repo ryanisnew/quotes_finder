@@ -1,0 +1,109 @@
+@import "./local-variables/_index.scss";
+@import '../others/index';
+
+#sign-up {
+    height: 50vh;
+    width: 100%;
+    @include flexcenter;
+    background-color: rgb(0, 0, 20);
+}
+
+input:focus {
+  outline: none;
+}
+
+.ctr {
+  display: block;
+  position: relative;
+  width: 450px;
+}
+
+.loader {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.15);
+  width: 0%;
+  z-index: 99;
+  pointer-events: none;
+  -webkit-transition: 3s all ease;
+  transition: 3s all ease;
+}
+
+.loader.full {
+  width: 100%;
+}
+
+.loader.done {
+  background: #e74c3c;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  height: 0;
+}
+
+input {
+  line-height: 80px;
+  width: 100%;
+  font-size: 24px;
+  padding: 0 20px;
+  border: none;
+  cursor: pointer;
+  color: blue;
+  position: relative;
+  z-index: 10;
+  background: transparent;
+  color: transparent;
+  font-weight: 300;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  font-family: "Roboto", sans-serif;
+}
+
+input.full {
+  pointer-events: none !important;
+  width: 0%;
+}
+
+.indicator {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 5px;
+  background: #e74c3c;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  z-index: 9;
+  font-family: "Roboto", sans-serif;
+}
+
+.indicator:after {
+  content: attr(data-content);
+  position: absolute;
+  top: -50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #777;
+  -webkit-transition: inherit;
+  transition: inherit;
+  font-size: 24px;
+  z-index: 999;
+  text-align: left;
+  font-weight: 300;
+}
+
+input:focus {
+  color: white;
+}
+
+input:focus + .indicator {
+  height: 100%;
+}
+
+input.full:focus + .indicator {
+  height: 5px;
+  color: #e74c3c;
+}
+
+input:focus + .indicator:after {
+  color: #e74c3c;
+}

@@ -13,40 +13,44 @@
     width: 45%;
     padding-left: $padding-left;
     margin-inline: 20px;
-    &__title {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
     .search-bar {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-      color: black;
+      width: 80%;
+      font-size: 2em;
+      color: white;
+      background-color: transparent;
+      border: none;
+      outline: none;
     }
+  }
+  &__title {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
   }
   //   hero right
   &__right {
-    width: 30vw;
+    width: 25vw;
     background-color: none;
     flex-direction: column;
     padding-right: $padding-right;
-    margin-right: 80px;
+    margin-right: 40px;
     margin-top: 90px;
     @include flexcenter();
     img {
-        border-radius: 10px;
-        object-fit: cover;
-        @include allimg;
-        @include boxshadow;
+      border-radius: 10px;
+      object-fit: cover;
+      @include allimg;
+      @include boxshadow;
     }
     .overlay-text {
-      width: auto;
       position: relative;
+      left: 50%;
+      width: 100%;
+      max-height: 70px;
+      transform: translate(-50%, -100%);
       background-color: #000000;
       color: #fff;
-      top: -70px;
-      padding: 10px 20px;
+      padding: 10px 10px;
       font-size: 20px;
       text-align: center;
     }

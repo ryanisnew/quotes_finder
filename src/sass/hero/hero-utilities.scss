@@ -1,0 +1,11 @@
+@mixin boxshadow {
+  box-shadow: 2px 0px 33px 4px rgba(255, 223, 1, 1);
+  -webkit-box-shadow: 2px 0px 33px 4px rgba(255, 223, 1, 1);
+  -moz-box-shadow: 2px 0px 33px 4px rgba(255, 223, 1, 1);
+}
+
+@mixin allimg {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+}

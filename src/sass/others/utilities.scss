@@ -1,0 +1,8 @@
+$padding-left: 40px;
+$padding-right: 40px;
+
+@mixin flexcenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

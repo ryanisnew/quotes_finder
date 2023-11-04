@@ -1,0 +1,40 @@
+@import '../others/index';
+
+#five-quotes {
+    @include flexcenter();
+    flex-direction: column;
+    background-color: black;
+    padding-left: $padding-left;
+    padding-right: $padding-right;
+}
+
+.section-two-div {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    div {
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 25vw;
+        }
+        p {
+            font-size: 2em;
+        }
+    }
+    .div {
+        &-left {
+            margin-right: 40px;
+            height: 35vh;
+            width: 40vw;
+        }
+        &-right {
+            margin-left: 40px;
+            height: 35vh;
+            width: 40vw;
+            display: flex;
+            text-align: right;
+            justify-content: right;
+        }
+    }
+}

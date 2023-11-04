@@ -1,0 +1,26 @@
+@mixin eachback {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(253, 208, 23, 0.8155856092436975) 100%
+  );
+}
+
+@mixin eachbackreverse {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    -90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(253, 208, 23, 0.8155856092436975) 100%
+  );
+}
+
+.section {
+  &-left {
+    @include eachbackreverse();
+  }
+  &-right {
+    @include eachback();
+  }
+}

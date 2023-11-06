@@ -1,0 +1,23 @@
+@import 'hero-utilities';
+$maxheight: 30vh;
+$maxwidth: 100%;
+
+.overlay-text {
+  position: relative;
+  top: -50px;
+  width: $maxwidth;
+  height: auto;
+  max-height: $maxheight;
+  border-radius: 10px;
+  background-color: rgba($color: white, $alpha: 0.8);
+  color: black;
+  padding: 10px 10px;
+  /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+  font-size: 1.2rem;
+  text-align: center;
+  // @include boxshadow;
+  &__wrapper {
+    width: $maxwidth;
+    height: $maxheight;
+  }
+}

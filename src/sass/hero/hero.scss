@@ -2,7 +2,7 @@
 @import "./hero-utilities.scss";
 
 .hero {
-  height: 100vh;
+  height: var(--viewHeight);
   width: 95vw;
   display: flex;
   justify-content: space-between;
@@ -10,40 +10,39 @@
 
   //   hero left
   &__left {
-    width: 45%;
+    width: var(--viewWidth);
     padding-left: $padding-left;
     margin-inline: 20px;
-    .search-bar {
-      width: 80%;
-      font-size: 2em;
-      color: white;
-      background-color: transparent;
-      border: none;
-      outline: none;
-    }
+    // .search-bar {
+    //   width: 80%;
+    //   font-size: 2em;
+    //   color: white;
+    //   background-color: transparent;
+    //   border: none;
+    //   outline: none;
+    // }
   }
   &__title {
-    font-size: 3em;
+    font-size: 4em;
+    line-height: 1.5em;
+    margin-top: 1.5em;
     font-weight: bold;
-    margin-bottom: 20px;
+    text-align: center;
+    color: black;
+    -webkit-text-stroke: 0.3px burlywood;
+    // margin-bottom: 20px;
   }
   //   hero right
   &__right {
-    width: 30vw;
-    height: 100vh;
-    background-color: none;
-    flex-direction: column;
-    padding-right: $padding-right;
-    margin-right: 40px;
-    margin-top: 90px;
+    width: var(--widthPercent);
+    height: var(--viewHeight);
+    flex-direction: row;
     @include flexcenter();
     img {
-      width: 100%;
-      height: 25vw;
-      border-radius: 10px;
+      width: 60vw;
+      height: var(--viewHeight);
       object-fit: cover;
-      @include allimg;
-      @include boxshadow;
+      box-shadow: 0 0 50px 50px white inset;
     }
   }
 }

@@ -14,9 +14,9 @@ async function fetchApi() {
     console.log(result);
 
     // overlay-text
-    const overlayText = document.querySelector(".overlay-text"),
+    const overlayText = document.querySelector(".quote"),
       author = result.originator.name,
-      quoteAuthor = "-- " + author,
+      quoteAuthor = "<br \>-- " + author,
       authorUrl = result.originator.url,
       quote = result.content + " ";
     overlayText.innerHTML =

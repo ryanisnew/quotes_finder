@@ -11,20 +11,26 @@ async function fetchApi() {
   try {
     const res = await fetch(url, options);
     const result = await res.json();
-    console.log(res);
-    // overlay-text
-    const overlayText = document.querySelector(".quote"),
-      author = result.originator.name,
-      quoteAuthor = "<br >-- " + author,
-      authorUrl = result.originator.url,
-      quote = result.content + " ";
-    overlayText.innerHTML =
-      quote +
-      `<a href='${authorUrl}' target='_blank' style='color: blue;'>` +
-      quoteAuthor +
-      "</a>";
+    console.log(result);
+    return result;
   } catch (error) {
     console.error(error);
   }
-
+  
 }
+
+fetchApi().then((data) => {
+  let result = data;
+  console.log(result)
+  // // overlay-text
+  const overlayText = document.querySelector(".quote"),
+    author = result.originator.name,
+    quoteAuthor = "<br >-- " + author,
+    authorUrl = result.originator.url,
+    quote = result.content + " ";
+  overlayText.innerHTML =
+    quote +
+    `<a href='${authorUrl}' target='_blank' style='color: blue;'>` +
+    quoteAuthor +
+    "</a>";
+})
